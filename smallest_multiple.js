@@ -10,5 +10,17 @@ module.exports = function( ceiling ) {
   // do work here
 
 
-  return 0;
+var number = 1;
+
+function findNumber(){
+  for(var i = 1; i <= ceiling; i++){
+    if(number % i !== 0){
+      return false;
+    }
+  }
+}
+while(findNumber() === false){
+  number++;
+}
+return number;
 };
